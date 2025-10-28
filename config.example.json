@@ -1,0 +1,35 @@
+# InfoFlow MCP Server Configuration Example
+# Copy this to config.json and customize as needed
+
+{
+  "server": {
+    "name": "infoflow-mcp-server",
+    "version": "1.0.0",
+    "log_level": "INFO"
+  },
+  "database": {
+    "path": "infoflow.db",
+    "backup_enabled": true,
+    "backup_interval_hours": 24
+  },
+  "filtering": {
+    "default_min_priority": 3,
+    "default_relevance_threshold": 0.3
+  },
+  "synthesis": {
+    "max_sources_per_synthesis": 10,
+    "summary_max_length": 500
+  },
+  "decisions": {
+    "auto_generate_recommendations": true,
+    "track_outcomes": true
+  },
+  "monitoring": {
+    "check_interval_minutes": 60,
+    "max_monitored_topics_per_user": 20
+  },
+  "notifications": {
+    "enabled": false,
+    "default_threshold": 3
+  }
+}
